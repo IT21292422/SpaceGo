@@ -20,12 +20,12 @@ export default function APOD() {
   return (
     <>
     <h1 className="text-3xl font-bold text-center text-white mb-8 mt-8">Picture Of The <span className="text-[#E84D54]">Day</span></h1>
-    <div className="grid gap-2 md:grid-cols-2 justify-center items-center">
+    <div className="grid gap-5 lg:grid-cols-2 justify-items-center items-center lg:pr-20">
         <div>
-            <img src={data.url} className="p-5"/>
+            <img src={data.url} className="h-[600px] object-cover p-10"/>
         </div>
 
-        <div className="card bg-gradient-to-r from-[#c04e64] to-[#7F3547] mx-5 p-4 mb-3">
+        <div className="card bg-gradient-to-r from-[#c04e64] to-[#7F3547] mx-5 p-4 mb-3 h-fit">
         <h1 className="text-2xl text-center font-semibold text-white mb-2">{data.title}</h1>
         <p className="text-md text-center text-white">{data.explanation}</p>
         </div>
