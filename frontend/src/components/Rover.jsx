@@ -36,7 +36,7 @@ export default function Rover() {
         <option value="minites">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
       </select>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center pb-10">
       {data.length === 0 ? (
           <div>Loading...</div>
         ) : (
