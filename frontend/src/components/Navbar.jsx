@@ -20,7 +20,7 @@ export default function Navbar() {
                 </div>
                 {isAuthenticated &&
                     <div className="flex flex-col text-white">
-                    <p className="text-sm leading-3">{user.name}</p>
+                    <p className="text-sm leading-3">{user.given_name}</p>
                     <p className="text-sm"><a className="link link-hover" onClick={logout}>Logout</a></p>
                     </div>}
             </div>
