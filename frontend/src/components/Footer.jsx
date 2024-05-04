@@ -7,9 +7,9 @@ export default function Footer() {
         <div class="divider before:bg-[#E84D54] after:bg-[#E84D54]"></div>
             <footer className="footer footer-center p-10 bg-transparent text-white rounded">
                 <nav className="grid grid-flow-col gap-4">
-                    <Link to="/"><a className="link link-hover">Home</a></Link>
-                    <Link to="/earth"><a className="link link-hover">Earth</a></Link>
-                    <Link to="/mars"><a className="link link-hover">Mars</a></Link>
+                    <Link to="/"><a className="link link-hover underline-offset-8">Home</a></Link>
+                    <Link to="/earth"><a className="link link-hover underline-offset-8">Earth</a></Link>
+                    <Link to="/mars"><a className="link link-hover underline-offset-8">Mars</a></Link>
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">
