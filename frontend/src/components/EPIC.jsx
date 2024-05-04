@@ -3,6 +3,7 @@ import axios from "axios"
 
 export default function EPIC() {
     const [data, setData] = useState([""]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const retrieveData = () => {
         axios.get(`https://api.nasa.gov/EPIC/api/natural/images?api_key=${import.meta.env.VITE_apikey}`)
@@ -13,7 +14,7 @@ export default function EPIC() {
                     caption: photo.caption
                 }));
                 setData(photos);
-                console.log(photos);
+                setIsLoading(false);
             })
             .catch((error) => {
                 console.log(error.response.data);
@@ -27,7 +28,13 @@ export default function EPIC() {
     const renderImages = data.map((photo, index) => {
         return (
             <>
+            {
+            isLoading ? (
+                <span className="loading loading-bars loading-lg"></span>
+            ) : (
                 <img key={index} src={photo.image} />
+                )
+            }    
             </>
         )
     })

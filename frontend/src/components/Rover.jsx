@@ -4,12 +4,13 @@ import axios from "axios"
 export default function Rover() {
   const [data, setData] = useState([]);
   const [camera, setCamera] = useState('fhaz');
+  const [isLoading, setIsLoading] = useState(true);
 
   const retrieveData = () => {
     axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=${camera}&api_key=${import.meta.env.VITE_apikey}`).then((res) => {
       const photos = res.data.photos.slice(0, 20);
       setData(photos);
-      console.log(data);
+      setIsLoading(false);
     })
       .catch((error) => {
         console.log(error.response.data);
@@ -38,7 +39,7 @@ export default function Rover() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center pb-10">
       {data.length === 0 ? (
-          <div>Loading...</div>
+        <span className="loading loading-bars loading-lg"></span>
         ) : (
           data.map((photo) => (
             <div key={photo.id}>

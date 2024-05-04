@@ -20,6 +20,4 @@ export default function ProtectedRoutes() {
         return <Outlet/>
     }
 
-    // const user = null
-    // return user ?  : 
 }
