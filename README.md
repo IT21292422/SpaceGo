@@ -1,6 +1,8 @@
 # Space Go
 Space Go is a space themed web application developed using React and using Daisy UI (Tailwind) for styling. This is developed utilizing API provided by NASA Open API for various interactions in the web application. Kinde is used as the Authentication Provider to login and register user.
 
+- Vercel Deployed Link : [Vercel](https://space-go.vercel.app/)
+
 ## Setup Instructions
 
 ### Prerequisites
