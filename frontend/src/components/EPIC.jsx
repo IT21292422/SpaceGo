@@ -51,7 +51,7 @@ export default function EPIC() {
                 </div>
             </div>
             <h1 className="text-yellow-300 text-center"> Swipe to see some of the cool photos taken by EPIC</h1>
-            <div className="carousel carousel-end rounded-box h-96">
+            <div className="carousel rounded-box h-96">
                 <div className="carousel-item">
                     {renderImages}
                 </div>

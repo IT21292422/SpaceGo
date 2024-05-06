@@ -38,7 +38,7 @@ export default function Rover() {
       </select>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center pb-10">
-      {data.length === 0 ? (
+      {data.length === 0 || isLoading ? (
         <span className="loading loading-bars loading-lg"></span>
         ) : (
           data.map((photo) => (
